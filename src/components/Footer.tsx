@@ -7,7 +7,9 @@ export const Footer = () => {
             © {new Date().getFullYear()} Jonathan Ostertag. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Built with React, TypeScript & Tailwind CSS
+            Built with&nbsp;
+            <a href="https://lovable.dev" target="_blank" className="text-accent">Lovable</a>
+            , React, TypeScript & Tailwind CSS
           </p>
         </div>
       </div>

@@ -6,12 +6,12 @@ const quickFacts = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Munich, Germany", // TODO: verify location
+    value: "Munich, Germany \n (heart in munich, open for worldwide travel)",
   },
   {
     icon: Briefcase,
     label: "Current Focus",
-    value: "AI-based information systems & frontend architecture",
+    value: "Business Information Systems & Integrated Web Applications",
   },
   {
     icon: GraduationCap,
@@ -39,35 +39,36 @@ export const About = () => {
             <img
               src={workspaceImage}
               alt="Collaborative workspace with team members working together on laptops"
-              className="w-full h-64 md:h-96 object-cover"
+              className="w-full h-64 md:h-96 object-cover object-[0%_17%]"
             />
           </div>
 
           {/* Bio paragraphs */}
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed animate-fade-in">
             <p>
+              Hi! I'm Jonathan. I was born and raised in Munich.
+              I had the (most of the time) privilege of growing up with an older sister and two younger brothers.
+              Besides technical interests, I am passionate about playing music (drums, keyboard, guitar & bass), sports, and spending time outdoors.
+              I perceive myself as a humorful person, although my friends would probably disagree sometimes 😅.
+            </p>
+
+            <p>
               I'm currently pursuing my Master's in Information Systems at the Technical 
               University of Munich (TUM), building on my bachelor's degree from the same 
               institution. From an early age, I've been fascinated by technology and how 
               it can solve real problems—not just technical ones, but challenges that 
               impact people's daily lives.
-            </p>
-
-            <p>
               My work sits at the intersection of strong technical skills and a deep 
               interest in user experience, IT governance, and collaboration. I describe 
               myself as a "people-oriented nerd" because I believe the best software 
-              is built with and for humans, not just machines. Whether I'm leading a 
-              small frontend team or working with clients on IT audit processes, I value 
-              clear communication and effective teamwork.
+              is built with and for humans, not just machines. 
             </p>
 
             <p>
               Right now, I'm particularly excited about AI-assisted developer tools, 
-              data-driven decision-making, and clean frontend architecture. I love 
-              exploring how emerging technologies can make development more efficient 
-              while maintaining code quality and user-centered design.
-              {/* TODO: verify or adjust current interests */}
+              data-driven decision-making, and IT architecture. I love 
+              exploring how emerging technologies can make industry more efficient 
+              while maintaining quality and user-centered design.
             </p>
           </div>
 
@@ -89,7 +90,7 @@ export const About = () => {
                       <p className="font-medium text-sm text-muted-foreground mb-1">
                         {fact.label}
                       </p>
-                      <p className="text-foreground">{fact.value}</p>
+                      <p className="text-foreground whitespace-pre-line">{fact.value}</p>
                     </div>
                   </div>
                 </Card>

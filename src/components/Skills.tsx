@@ -5,6 +5,18 @@ import skillsIllustration from "@/assets/skills-illustration.jpg";
 
 const skillCategories = [
   {
+    icon: Workflow,
+    title: "Ways of Working",
+    description: "Applying structured methodologies to deliver value efficiently",
+    skills: ["IT Architecture", "IT Governance", "Requirements Engineering", "Scrum", "Kanban"],
+  },
+  {
+    icon: Database,
+    title: "Data & DevOps",
+    description: "Managing data and streamlining deployment workflows",
+    skills: ["MySQL", "PostgreSQL", "Docker", "GitHub Actions", "NumPy", "TensorFlow"],
+  },
+  {
     icon: Code2,
     title: "Frontend",
     description: "Building modern, responsive user interfaces with attention to detail",
@@ -16,18 +28,8 @@ const skillCategories = [
     description: "Creating robust server-side solutions and RESTful services",
     skills: ["Java", "Spring Boot", "FastAPI", "REST APIs"],
   },
-  {
-    icon: Database,
-    title: "Data & DevOps",
-    description: "Managing data pipelines and streamlining deployment workflows",
-    skills: ["MySQL", "PostgreSQL", "Docker", "GitHub Actions", "NumPy", "TensorFlow"],
-  },
-  {
-    icon: Workflow,
-    title: "Ways of Working",
-    description: "Applying structured methodologies to deliver value efficiently",
-    skills: ["Scrum", "Kanban", "IT Governance", "Requirements Engineering", "Architecture Basics"],
-  },
+  
+  
 ];
 
 export const Skills = () => {
@@ -37,15 +39,6 @@ export const Skills = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 animate-fade-in">
           Skills & tools
         </h2>
-
-        {/* Illustration */}
-        <div className="max-w-2xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-medium animate-fade-in">
-          <img
-            src={skillsIllustration}
-            alt="Visual representation of modern web architecture with frontend, backend, and database layers"
-            className="w-full h-64 object-cover"
-          />
-        </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (

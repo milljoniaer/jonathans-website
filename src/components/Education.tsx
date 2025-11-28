@@ -11,14 +11,14 @@ const education = [
   {
     degree: "B.Sc. Information Systems",
     institution: "Technical University of Munich (TUM)",
-    period: "Completed",
-    description: "Thesis: Improving user experience of the Artemis learning platform",
+    period: "2020–2024",
+    description: "Average grade 2.0 - Thesis: Improving user experience of the Artemis learning platform (Grade 1.0)",
   },
   {
     degree: "A-levels (Abitur)",
-    institution: "Gymnasium",
-    period: "Completed",
-    description: "Strong academic performance with focus on mathematics and sciences",
+    institution: "Thomas Mann Gymnasium München",
+    period: "2012-2020",
+    description: "Average grade 1.3 - Gradiuation exams in Mathematics, German, English, Informatics, Religion",
   },
 ];
 

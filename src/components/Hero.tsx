@@ -1,6 +1,6 @@
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import portraitPlaceholder from "@/assets/portrait-placeholder.jpg";
+import portraitPlaceholder from "@/assets/portrait-1.jpg";
 import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
@@ -16,10 +16,9 @@ export const Hero = () => {
           alt=""
           className="w-full h-full object-cover opacity-20 dark:opacity-10"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background"></div>
       </div>
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Text content */}
           <div className="space-y-6 animate-fade-in">
             <div className="space-y-2">
@@ -27,7 +26,7 @@ export const Hero = () => {
                 Jonathan Ostertag
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
-                Software Engineer & Information Systems M.Sc. Student
+                Information Systems M.Sc. Student
               </p>
             </div>
 
@@ -65,10 +64,9 @@ export const Hero = () => {
               <div className="absolute inset-0 gradient-accent rounded-full blur-3xl opacity-20"></div>
               <img
                 src={portraitPlaceholder}
-                alt="Jonathan Ostertag - Replace with real photo"
-                className="relative rounded-full w-80 h-80 md:w-96 md:h-96 object-cover shadow-medium"
+                alt="Jonathan Ostertag"
+                className="relative rounded-full w-80 h-80 md:w-96 md:h-96 object-cover object-[50%_20%] shadow-medium"
               />
-              {/* TODO: Replace with real photo of Jonathan */}
             </div>
           </div>
         </div>

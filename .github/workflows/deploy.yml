@@ -1,0 +1,50 @@
+
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to hml web
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "web"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: web
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Build
+        run: |
+          npm install --production
+          npm run build
+      - name: prepare ssh
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_WEB_PRIV_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_WEB_PUB_KEY }}" > ~/.ssh/id_rsa.pub
+          chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
+          ssh-keyscan -H "${{ secrets.SSH_WEB_HOST }}" >> ~/.ssh/known_hosts
+          echo "Host 1and1" > ~/.ssh/config
+          echo "  User ${{ secrets.SSH_WEB_USER }}" >> ~/.ssh/config
+          echo "  HostName ${{ secrets.SSH_WEB_HOST }}" >> ~/.ssh/config
+          echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+      - name: Deploy
+        run: bin/deploy-website
+          

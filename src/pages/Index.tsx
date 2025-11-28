@@ -28,10 +28,10 @@ const Index = () => {
       <About />
       <Skills />
       <Experience />
-      <Projects />
-      <Writing />
       <Education />
       <Contact />
+      <Projects />
+      <Writing />
       <Footer />
     </div>
   );

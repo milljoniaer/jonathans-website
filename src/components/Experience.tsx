@@ -32,7 +32,7 @@ const experiences = [
     period: "2021–2024",
     description: [
       "Built internal tools for actuaries with complex data visualization",
-      "Developed campaign websites and content management systems",
+      "Developed company & campaign websites with content management system integrations",
       "Maintained large-scale production websites with high traffic",
       "Improved CI/CD pipelines and worked in cross-functional agile teams",
     ],
@@ -77,7 +77,7 @@ export const Experience = () => {
                 <ul className="space-y-2 text-muted-foreground">
                   {exp.description.map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-accent mt-1.5">•</span>
+                      <span className="text-accent">•</span>
                       <span>{item}</span>
                     </li>
                   ))}

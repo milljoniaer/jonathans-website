@@ -2,9 +2,9 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import projectImg1 from "@/assets/project-placeholder-1.jpg";
-import projectImg2 from "@/assets/project-placeholder-2.jpg";
-import projectImg3 from "@/assets/project-placeholder-3.jpg";
+import projectImg1 from "@/assets/personal-website.png";
+import projectImg2 from "@/assets/rate-it.svg";
+import projectImg3 from "@/assets/artemis.png";
 
 // TODO: Update project descriptions with real data
 const projects = [
@@ -17,7 +17,8 @@ const projects = [
       "Implemented interface improvements that increased task completion rates",
     ],
     technologies: ["UX Research", "Usability Testing", "Angular", "TypeScript"],
-    placeholder: false, // This one is real based on CV
+    github: "https://github.com/ls1intum/Artemis",
+    demo: "https://artemis.tum.de"
   },
   {
     title: "RateIt – AI-powered outfit rating",
@@ -25,21 +26,21 @@ const projects = [
     description: [
       "Social platform for fashion enthusiasts to rate and discover outfit combinations",
       "Integrated AI-based image analysis for style recommendations",
-      "Built responsive web application with real-time updates",
+      "Built web application with microservices architecture, browser add-on and mobile app",
     ],
     technologies: ["React", "Next.js", "AI/ML", "PostgreSQL"],
-    placeholder: true, // TODO: confirm project details
-  },
+    github: "https://github.com/JustRateIt"},
   {
-    title: "MediaMind – News analysis microservices",
+    title: "This Website",
     image: projectImg1,
     description: [
-      "Experimental microservices architecture for news aggregation and sentiment analysis",
-      "Implemented Docker-based deployment with automated testing pipeline",
-      "Explored scalability patterns and API design best practices",
+      "Experimental AI-generated project based on CV input (see lovable's website)",
+      "I can only recommend trying it out yourself to see the results! 😄",
+      "Explores the capabilities of AI in web development and replacing web devs...",
     ],
-    technologies: ["Python", "FastAPI", "Docker", "Microservices"],
-    placeholder: true, // TODO: confirm project details
+    technologies: ["Lovable", "React", "Vite", "Tailwind & Shadcn"],
+    github: "https://github.com/milljoniaer/jonathans-website",
+    demo: "https://jonathan.ostertage.de"
   },
 ];
 
@@ -52,7 +53,7 @@ export const Projects = () => {
             Selected projects
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Note: Some project descriptions are placeholders and can be updated with actual details.
+            A selection of personal recent projects (besides professional projects).
           </p>
         </div>
 
@@ -64,7 +65,7 @@ export const Projects = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Project image */}
-              <div className="w-full h-48 overflow-hidden">
+              <div className="w-full h-48 overflow-hidden bg-white">
                 <img
                   src={project.image}
                   alt={`${project.title} preview`}
@@ -74,17 +75,6 @@ export const Projects = () => {
 
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex-1 space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-semibold flex items-center justify-between">
-                      {project.title}
-                      {project.placeholder && (
-                        <Badge variant="secondary" className="text-xs">
-                          Draft
-                        </Badge>
-                      )}
-                    </h3>
-                  </div>
-
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     {project.description.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
@@ -109,14 +99,19 @@ export const Projects = () => {
 
                 {/* Placeholder for links - TODO: Add real links */}
                 <div className="flex gap-2 mt-6 pt-4 border-t">
-                  <Button variant="outline" size="sm" className="flex-1" disabled>
-                    <Github className="h-4 w-4 mr-1" />
-                    Code
-                  </Button>
-                  <Button variant="outline" size="sm" className="flex-1" disabled>
-                    <ExternalLink className="h-4 w-4 mr-1" />
-                    Demo
-                  </Button>
+                  {project.github && <a href={project.github} className="flex-1" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="w-full" disabled>
+                      <Github className="h-4 w-4 mr-1" />
+                      Code
+                    </Button>
+                  </a>}
+                  {project.demo && <a href={project.demo} className="flex-1" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="w-full"  disabled>
+                      <ExternalLink className="h-4 w-4 mr-1" />
+                      Demo
+                    </Button>
+                  </a>
+                  }
                 </div>
               </div>
             </Card>
