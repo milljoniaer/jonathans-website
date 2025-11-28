@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { GraduationCap, MapPin, Briefcase, Languages } from "lucide-react";
+import workspaceImage from "@/assets/about-workspace.jpg";
 
 const quickFacts = [
   {
@@ -33,6 +34,15 @@ export const About = () => {
         </h2>
 
         <div className="max-w-4xl mx-auto space-y-8">
+          {/* Hero image */}
+          <div className="w-full rounded-2xl overflow-hidden shadow-medium animate-fade-in">
+            <img
+              src={workspaceImage}
+              alt="Collaborative workspace with team members working together on laptops"
+              className="w-full h-64 md:h-96 object-cover"
+            />
+          </div>
+
           {/* Bio paragraphs */}
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed animate-fade-in">
             <p>

@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code2, Server, Database, Workflow } from "lucide-react";
+import skillsIllustration from "@/assets/skills-illustration.jpg";
 
 const skillCategories = [
   {
@@ -33,9 +34,18 @@ export const Skills = () => {
   return (
     <section id="skills" className="section-padding">
       <div className="container-custom">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 animate-fade-in">
           Skills & tools
         </h2>
+
+        {/* Illustration */}
+        <div className="max-w-2xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-medium animate-fade-in">
+          <img
+            src={skillsIllustration}
+            alt="Visual representation of modern web architecture with frontend, backend, and database layers"
+            className="w-full h-64 object-cover"
+          />
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (

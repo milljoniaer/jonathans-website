@@ -1,14 +1,24 @@
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portraitPlaceholder from "@/assets/portrait-placeholder.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-16 section-padding"
+      className="min-h-screen flex items-center justify-center pt-16 section-padding relative overflow-hidden"
     >
-      <div className="container-custom">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroBackground}
+          alt=""
+          className="w-full h-full object-cover opacity-20 dark:opacity-10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background"></div>
+      </div>
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div className="space-y-6 animate-fade-in">
