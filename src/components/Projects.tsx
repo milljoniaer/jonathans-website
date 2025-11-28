@@ -2,11 +2,15 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import projectImg1 from "@/assets/project-placeholder-1.jpg";
+import projectImg2 from "@/assets/project-placeholder-2.jpg";
+import projectImg3 from "@/assets/project-placeholder-3.jpg";
 
 // TODO: Update project descriptions with real data
 const projects = [
   {
     title: "Artemis UX Improvements",
+    image: projectImg3,
     description: [
       "Bachelor's thesis focused on enhancing user experience of TUM's learning platform",
       "Conducted user research and usability testing with students and instructors",
@@ -17,6 +21,7 @@ const projects = [
   },
   {
     title: "RateIt – AI-powered outfit rating",
+    image: projectImg2,
     description: [
       "Social platform for fashion enthusiasts to rate and discover outfit combinations",
       "Integrated AI-based image analysis for style recommendations",
@@ -27,6 +32,7 @@ const projects = [
   },
   {
     title: "MediaMind – News analysis microservices",
+    image: projectImg1,
     description: [
       "Experimental microservices architecture for news aggregation and sentiment analysis",
       "Implemented Docker-based deployment with automated testing pipeline",
@@ -54,53 +60,64 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 animate-scale-in flex flex-col"
+              className="p-0 hover:shadow-medium transition-all duration-300 hover:-translate-y-1 animate-scale-in flex flex-col overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex-1 space-y-4">
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold flex items-center justify-between">
-                    {project.title}
-                    {project.placeholder && (
-                      <Badge variant="secondary" className="text-xs">
-                        Draft
-                      </Badge>
-                    )}
-                  </h3>
-                </div>
-
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  {project.description.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="text-accent mt-1">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.technologies.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="outline"
-                      className="text-xs border-accent/30"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
+              {/* Project image */}
+              <div className="w-full h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
-              {/* Placeholder for links - TODO: Add real links */}
-              <div className="flex gap-2 mt-6 pt-4 border-t">
-                <Button variant="outline" size="sm" className="flex-1" disabled>
-                  <Github className="h-4 w-4 mr-1" />
-                  Code
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1" disabled>
-                  <ExternalLink className="h-4 w-4 mr-1" />
-                  Demo
-                </Button>
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex-1 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold flex items-center justify-between">
+                      {project.title}
+                      {project.placeholder && (
+                        <Badge variant="secondary" className="text-xs">
+                          Draft
+                        </Badge>
+                      )}
+                    </h3>
+                  </div>
+
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {project.description.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-accent mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {project.technologies.map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="text-xs border-accent/30"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Placeholder for links - TODO: Add real links */}
+                <div className="flex gap-2 mt-6 pt-4 border-t">
+                  <Button variant="outline" size="sm" className="flex-1" disabled>
+                    <Github className="h-4 w-4 mr-1" />
+                    Code
+                  </Button>
+                  <Button variant="outline" size="sm" className="flex-1" disabled>
+                    <ExternalLink className="h-4 w-4 mr-1" />
+                    Demo
+                  </Button>
+                </div>
               </div>
             </Card>
           ))}
