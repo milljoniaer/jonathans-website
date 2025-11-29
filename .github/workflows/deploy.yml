@@ -28,9 +28,9 @@ jobs:
       - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '25'
       - name: Install dependencies
-        run: npm install --omit=dev
+        run: npm install
       - name: Build
         run: npm run build
       - name: prepare ssh
