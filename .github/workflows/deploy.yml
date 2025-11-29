@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20
+      - name: Use Node.js 25
         uses: actions/setup-node@v3
         with:
           node-version: '25'
@@ -41,7 +41,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
           ssh-keyscan -H "${{ secrets.SSH_WEB_HOST }}" >> ~/.ssh/known_hosts
-          echo "Host 1and1" > ~/.ssh/config
+          echo "Host website" > ~/.ssh/config
           echo "  User ${{ secrets.SSH_WEB_USER }}" >> ~/.ssh/config
           echo "  HostName ${{ secrets.SSH_WEB_HOST }}" >> ~/.ssh/config
           echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
