@@ -75,6 +75,11 @@ export const Projects = () => {
 
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex-1 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold flex items-center justify-between">
+                      {project.title}
+                    </h3>
+                  </div>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     {project.description.map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
