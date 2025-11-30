@@ -3,4 +3,4 @@
 cd dist || exit 3
 find . -type d -exec chmod 755 {} \;
 find . -type f -exec chmod 644 {} \;
-rsync -q --progress  -avz --delete . website:/var/www/jonathan/.
+rsync -q --progress  -avz --delete . website:jonathan/.
