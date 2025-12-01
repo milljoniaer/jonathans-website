@@ -85,16 +85,16 @@ export const Contact = () => {
                 href={link.href}
                 target={"_blank"}
                 rel={"noopener noreferrer"}
-                className="block"
+                className="block min-w-0"
               >
                 <Card className="p-6 hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-center gap-4">
                     <div className={`p-3 rounded-lg bg-accent/10 ${link.color}`}>
                       <link.icon className="h-6 w-6" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="font-medium">{link.label}</p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground break-all">
                         {link.href}
                       </p>
                     </div>
