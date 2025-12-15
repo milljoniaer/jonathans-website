@@ -13,6 +13,10 @@ concurrency:
 jobs:
   deploy-preview:
     if: github.event.pull_request.base.ref == 'main' && github.event.pull_request.head.ref != 'main'
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
     environment:
       name: preview
       url: https://jonathan.ostertage.de/${{ steps.slug.outputs.branch-slug }}
