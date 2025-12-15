@@ -1,59 +1,48 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import projectImg1 from "@/assets/personal-website.png";
 import projectImg2 from "@/assets/rate-it.svg";
 import projectImg3 from "@/assets/artemis.png";
 
-// TODO: Update project descriptions with real data
-const projects = [
-  {
-    title: "Artemis UX Improvements",
-    image: projectImg3,
-    description: [
-      "Bachelor's thesis focused on enhancing user experience of TUM's learning platform",
-      "Conducted user research and usability testing with students and instructors",
-      "Implemented interface improvements that increased task completion rates",
-    ],
-    technologies: ["UX Research", "Usability Testing", "Angular", "TypeScript"],
-    github: "https://github.com/ls1intum/Artemis",
-    demo: "https://artemis.tum.de"
-  },
-  {
-    title: "RateIt – AI-powered outfit rating",
-    image: projectImg2,
-    description: [
-      "Social platform for fashion enthusiasts to rate and discover outfit combinations",
-      "Integrated AI-based image analysis for style recommendations",
-      "Built web application with microservices architecture, browser add-on and mobile app",
-    ],
-    technologies: ["React", "Next.js", "AI/ML", "PostgreSQL"],
-    github: "https://github.com/JustRateIt"},
-  {
-    title: "This Website",
-    image: projectImg1,
-    description: [
-      "Experimental AI-generated project based on CV input (see lovable's website)",
-      "I can only recommend trying it out yourself to see the results! 😄",
-      "Explores the capabilities of AI in web development and replacing web devs...",
-    ],
-    technologies: ["Lovable", "React", "Vite", "Tailwind & Shadcn"],
-    github: "https://github.com/milljoniaer/jonathans-website",
-    demo: "https://jonathan.ostertage.de"
-  },
-];
-
 export const Projects = () => {
+  const { t } = useTranslation();
+  const projectItems = t("projects.items", { returnObjects: true }) as Array<{
+    title: string;
+    description: string[];
+    technologies: string[];
+  }>;
+  
+  const projects = [
+    {
+      ...projectItems[0],
+      image: projectImg3,
+      github: "https://github.com/ls1intum/Artemis",
+      demo: "https://artemis.tum.de"
+    },
+    {
+      ...projectItems[1],
+      image: projectImg2,
+      github: "https://github.com/JustRateIt"
+    },
+    {
+      ...projectItems[2],
+      image: projectImg1,
+      github: "https://github.com/milljoniaer/jonathans-website",
+      demo: "https://jonathan.ostertage.de"
+    },
+  ];
   return (
     <section id="projects" className="section-padding">
       <div className="container-custom">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold animate-fade-in">
-            Selected projects
+            {t("projects.title")}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A selection of personal recent projects (besides professional projects).
+            {t("projects.subtitle")}
           </p>
         </div>
 
@@ -107,13 +96,13 @@ export const Projects = () => {
                   {project.github && <a href={project.github} className="flex-1" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm" className="w-full" disabled>
                       <Github className="h-4 w-4 mr-1" />
-                      Code
+                      {t("projects.code")}
                     </Button>
                   </a>}
                   {project.demo && <a href={project.demo} className="flex-1" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm" className="w-full"  disabled>
                       <ExternalLink className="h-4 w-4 mr-1" />
-                      Demo
+                      {t("projects.demo")}
                     </Button>
                   </a>
                   }

@@ -1,51 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 import { Briefcase, Calendar } from "lucide-react";
 
-const experiences = [
-  {
-    role: "Frontend Team Lead (Student)",
-    company: "TUM @ CSEE GmbH / EUTOP",
-    period: "2025",
-    description: [
-      "Leading small frontend team for AI-based internal business information system",
-      "Managing customer interactions and technical architecture decisions",
-      "Coordinating development workflows and code quality standards",
-    ],
-    technologies: ["React", "TypeScript", "AI Integration", "Team Leadership"],
-  },
-  {
-    role: "Working Student",
-    company: "PricewaterhouseCoopers (Technical Process Risk)",
-    period: "2024–2025",
-    description: [
-      "Supporting IT audit teams with governance and risk assessment",
-      "Creating presentations and analysis documentation in PowerPoint and Excel",
-      "Communicating directly with clients on technical audit matters",
-      "Contributing to IT process and control evaluations",
-    ],
-    technologies: ["IT Governance", "Audit Support", "Client Communication", "Excel/PowerPoint"],
-  },
-  {
-    role: "Junior Frontend Engineer",
-    company: "Satellytes (Projects @ Allianz, MediaMarktSaturn, ADAC Motorsport)",
-    period: "2021–2024",
-    description: [
-      "Built internal tools for actuaries with complex data visualization",
-      "Developed company & campaign websites with content management system integrations",
-      "Maintained large-scale production websites with high traffic",
-      "Improved CI/CD pipelines and worked in cross-functional agile teams",
-    ],
-    technologies: ["React", "Angular", "TypeScript", "CI/CD", "Agile", "CMS"],
-  },
-];
-
 export const Experience = () => {
+  const { t } = useTranslation();
+  const experiences = t("experience.experiences", { returnObjects: true }) as Array<{
+    role: string;
+    company: string;
+    period: string;
+    description: string[];
+    technologies: string[];
+  }>;
   return (
     <section id="experience" className="section-padding bg-muted/30">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
-          Experience
+          {t("experience.title")}
         </h2>
 
         <div className="max-w-4xl mx-auto space-y-6">

@@ -1,0 +1,253 @@
+{
+  "languageSwitcher": {
+    "switchLanguage": "Sprache wechseln",
+    "english": "English",
+    "german": "Deutsch"
+  },
+  "nav": {
+    "logo": "JO",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "experience": "Erfahrung",
+    "contact": "Kontakt",
+    "projects": "Projekte"
+  },
+  "hero": {
+    "name": "Jonathan Ostertag",
+    "title": "M.Sc. Wirtschaftsinformatik Student",
+    "description": "Ich bin ein menschenorientierter Nerd, der es liebt, elegante und pragmatische Softwarelösungen zu entwickeln. Derzeit studiere ich Wirtschaftsinformatik an der TUM in München und arbeite an der Schnittstelle zwischen modernem Web-Engineering, Datenanalyse und IT-Governance – immer mit Fokus auf Zusammenarbeit und reale Auswirkungen.",
+    "viewExperience": "Erfahrung ansehen",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über mich",
+    "imageAlt": "Kollaborativer Arbeitsbereich mit Teammitgliedern, die zusammen an Laptops arbeiten",
+    "paragraph1": "Hallo! Ich bin Jonathan. Ich bin in München geboren und aufgewachsen. Ich hatte das (überwiegende) Privileg, mit einer älteren Schwester und zwei jüngeren Brüdern aufzuwachsen. Neben technischen Interessen bin ich leidenschaftlich daran interessiert, Musik zu spielen (Schlagzeug, Keyboard, Gitarre & Bass), Sport zu treiben und Zeit im Freien zu verbringen. Ich sehe mich selbst als humorvolle Person, obwohl meine Freunde dem manchmal widersprechen würden 😅.",
+    "paragraph2": "Ich absolviere derzeit meinen Master in Wirtschaftsinformatik an der Technischen Universität München (TUM), aufbauend auf meinem Bachelor-Abschluss von derselben Institution. Von klein auf war ich fasziniert von Technologie und wie sie echte Probleme lösen kann – nicht nur technische, sondern Herausforderungen, die den Alltag der Menschen beeinflussen. Meine Arbeit liegt an der Schnittstelle starker technischer Fähigkeiten und einem tiefen Interesse an User Experience, IT-Governance und Zusammenarbeit. Ich beschreibe mich selbst als \"menschenorientierten Nerd\", weil ich glaube, dass die beste Software mit und für Menschen gebaut wird, nicht nur für Maschinen.",
+    "paragraph3": "Momentan begeistere ich mich besonders für KI-gestützte Entwicklertools, datengetriebene Entscheidungsfindung und IT-Architektur. Ich liebe es zu erforschen, wie neue Technologien die Industrie effizienter machen können, während Qualität und benutzerzentriertes Design erhalten bleiben.",
+    "quickFacts": "Fakten auf einen Blick",
+    "location": "Standort",
+    "locationValue": "München, Deutschland \n (Herz in München, offen für weltweite Reisen)",
+    "currentFocus": "Aktueller Fokus",
+    "currentFocusValue": "Wirtschaftsinformatik & Integrierte Webanwendungen",
+    "workingStyle": "Arbeitsstil",
+    "workingStyleValue": "Strukturiert, kommunikativ, pragmatisch",
+    "languages": "Sprachen",
+    "languagesValue": "Deutsch (Muttersprache), Englisch (C1)"
+  },
+  "skills": {
+    "title": "Fähigkeiten & Werkzeuge",
+    "waysOfWorking": {
+      "title": "Arbeitsweisen",
+      "description": "Anwendung strukturierter Methoden zur effizienten Wertschöpfung",
+      "skills": [
+        "IT-Architektur",
+        "IT-Governance",
+        "Requirements Engineering",
+        "Scrum",
+        "Kanban"
+      ]
+    },
+    "dataDevOps": {
+      "title": "Daten & DevOps",
+      "description": "Verwaltung von Daten und Optimierung von Deployment-Workflows",
+      "skills": [
+        "MySQL",
+        "PostgreSQL",
+        "Docker",
+        "GitHub Actions",
+        "NumPy",
+        "TensorFlow"
+      ]
+    },
+    "frontend": {
+      "title": "Frontend",
+      "description": "Erstellung moderner, responsiver Benutzeroberflächen mit Liebe zum Detail",
+      "skills": [
+        "React",
+        "Angular",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "UI/UX-Prinzipien"
+      ]
+    },
+    "backend": {
+      "title": "Backend & APIs",
+      "description": "Entwicklung robuster serverseitiger Lösungen und RESTful-Dienste",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "FastAPI",
+        "REST APIs"
+      ]
+    }
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "experiences": [
+      {
+        "role": "Frontend Team Lead (Student)",
+        "company": "TUM @ CSEE GmbH / EUTOP",
+        "period": "2025",
+        "description": [
+          "Leitung eines kleinen Frontend-Teams für ein KI-basiertes internes Geschäftsinformationssystem",
+          "Verwaltung von Kundeninteraktionen und Entscheidungen zur technischen Architektur",
+          "Koordination von Entwicklungsworkflows und Codequalitätsstandards"
+        ],
+        "technologies": [
+          "React",
+          "TypeScript",
+          "KI-Integration",
+          "Teamführung"
+        ]
+      },
+      {
+        "role": "Werkstudent",
+        "company": "PricewaterhouseCoopers (Technical Process Risk)",
+        "period": "2024–2025",
+        "description": [
+          "Unterstützung von IT-Audit-Teams bei Governance und Risikobewertung",
+          "Erstellung von Präsentationen und Analysedokumentationen in PowerPoint und Excel",
+          "Direkte Kommunikation mit Kunden zu technischen Audit-Angelegenheiten",
+          "Beitrag zu IT-Prozess- und Kontrollbewertungen"
+        ],
+        "technologies": [
+          "IT-Governance",
+          "Audit-Unterstützung",
+          "Kundenkommunikation",
+          "Excel/PowerPoint"
+        ]
+      },
+      {
+        "role": "Junior Frontend Engineer",
+        "company": "Satellytes (Projekte @ Allianz, MediaMarktSaturn, ADAC Motorsport)",
+        "period": "2021–2024",
+        "description": [
+          "Entwicklung interner Tools für Aktuare mit komplexer Datenvisualisierung",
+          "Entwicklung von Unternehmens- und Kampagnenwebsites mit CMS-Integrationen",
+          "Wartung großer Produktionswebsites mit hohem Traffic",
+          "Verbesserung von CI/CD-Pipelines und Arbeit in funktionsübergreifenden agilen Teams"
+        ],
+        "technologies": [
+          "React",
+          "Angular",
+          "TypeScript",
+          "CI/CD",
+          "Agile",
+          "CMS"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Ausbildung",
+    "scholarship": {
+      "title": "Studienstiftung des deutschen Volkes",
+      "description": "Stipendiat seit 2021. Die Studienstiftung ist Deutschlands größte und renommierteste leistungsbasierte Stipendienstiftung, die Spitzenstudierende unterstützt, die akademische Exzellenz, intellektuelle Neugier und soziales Engagement zeigen."
+    },
+    "degrees": [
+      {
+        "degree": "M.Sc. Wirtschaftsinformatik",
+        "institution": "Technische Universität München (TUM)",
+        "period": "2024–2026 (laufend)",
+        "description": "Fortgeschrittene Studien in Informationssystemen, Datenanalyse und IT-Management"
+      },
+      {
+        "degree": "B.Sc. Wirtschaftsinformatik",
+        "institution": "Technische Universität München (TUM)",
+        "period": "2020–2024",
+        "description": "Durchschnittsnote 2,0 - Abschlussarbeit: Verbesserung der Benutzererfahrung der Artemis-Lernplattform (Note 1,0)"
+      },
+      {
+        "degree": "Abitur",
+        "institution": "Thomas-Mann-Gymnasium München",
+        "period": "2012-2020",
+        "description": "Durchschnittsnote 1,3 - Abiturprüfungen in Mathematik, Deutsch, Englisch, Informatik, Religion"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Ich bin immer offen für Diskussionen über neue Möglichkeiten, interessante Projekte oder potenzielle Kooperationen. Melden Sie sich gerne!",
+    "email": "E-Mail",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "downloadCV": "Lebenslauf herunterladen"
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "subtitle": "Eine Auswahl aktueller persönlicher Projekte (neben beruflichen Projekten).",
+    "code": "Code",
+    "demo": "Demo",
+    "items": [
+      {
+        "title": "Artemis UX-Verbesserungen",
+        "description": [
+          "Bachelorarbeit zur Verbesserung der Benutzererfahrung der TUM-Lernplattform",
+          "Durchführung von Benutzerforschung und Usability-Tests mit Studierenden und Dozenten",
+          "Implementierung von Interface-Verbesserungen, die die Task-Completion-Raten erhöhten"
+        ],
+        "technologies": [
+          "UX-Forschung",
+          "Usability-Tests",
+          "Angular",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": "RateIt – KI-gestützte Outfit-Bewertung",
+        "description": [
+          "Soziale Plattform für Mode-Enthusiasten zum Bewerten und Entdecken von Outfit-Kombinationen",
+          "Integration KI-basierter Bildanalyse für Stil-Empfehlungen",
+          "Entwicklung einer Webanwendung mit Microservices-Architektur, Browser-Add-on und mobiler App"
+        ],
+        "technologies": [
+          "React",
+          "Next.js",
+          "KI/ML",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "title": "Diese Website",
+        "description": [
+          "Experimentelles KI-generiertes Projekt basierend auf Lebenslauf-Input (siehe Lovable-Website)",
+          "Ich kann nur empfehlen, es selbst auszuprobieren, um die Ergebnisse zu sehen! 😄",
+          "Erkundet die Fähigkeiten von KI in der Webentwicklung und beim Ersetzen von Webentwicklern..."
+        ],
+        "technologies": [
+          "Lovable",
+          "React",
+          "Vite",
+          "Tailwind & Shadcn"
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "title": "Schreiben & Gedanken",
+    "articles": [
+      {
+        "title": "Bachelorarbeit: Verbesserung der allgemeinen Artemis-Benutzererfahrung",
+        "summary": "Wissenschaftliche Analyse, Design & Implementierung von UX-Best-Practices zur Verbesserung der Benutzerfreundlichkeit der TUM-Lernplattform Artemis, basierend auf Benutzerforschung und Norman & Nielsens Studien.",
+        "date": "15. März 2024"
+      },
+      {
+        "title": "Aufbau einer Gatsby.js CD-Pipeline mit GitHub Actions & Digital Ocean",
+        "summary": "Nach Netlifys Übernahme von Gatsby Cloud im Februar 2023, was zur Einstellung der Dienste von Gatsby Cloud führte, mussten wir eine alternative Lösung zum Hosten der Website eines unserer Kunden finden. Lesen Sie den folgenden Text, um tiefer in unsere Reise zur CD-Pipeline mit GitHub Actions, Digital Ocean Spaces und selbstgehosteten GitHub Runners einzutauchen.",
+        "date": "28. November 2023"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {{year}} Jonathan Ostertag. Alle Rechte vorbehalten.",
+    "builtWith": "Erstellt mit",
+    "and": ", React, TypeScript & Tailwind CSS"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Ups! Seite nicht gefunden",
+    "returnHome": "Zurück zur Startseite"
+  }
+}

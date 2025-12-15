@@ -1,43 +1,43 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 import { Code2, Server, Database, Workflow } from "lucide-react";
 import skillsIllustration from "@/assets/skills-illustration.jpg";
 
-const skillCategories = [
-  {
-    icon: Workflow,
-    title: "Ways of Working",
-    description: "Applying structured methodologies to deliver value efficiently",
-    skills: ["IT Architecture", "IT Governance", "Requirements Engineering", "Scrum", "Kanban"],
-  },
-  {
-    icon: Database,
-    title: "Data & DevOps",
-    description: "Managing data and streamlining deployment workflows",
-    skills: ["MySQL", "PostgreSQL", "Docker", "GitHub Actions", "NumPy", "TensorFlow"],
-  },
-  {
-    icon: Code2,
-    title: "Frontend",
-    description: "Building modern, responsive user interfaces with attention to detail",
-    skills: ["React", "Angular", "TypeScript", "JavaScript", "Next.js", "UI/UX principles"],
-  },
-  {
-    icon: Server,
-    title: "Backend & APIs",
-    description: "Creating robust server-side solutions and RESTful services",
-    skills: ["Java", "Spring Boot", "FastAPI", "REST APIs"],
-  },
-  
-  
-];
-
 export const Skills = () => {
+  const { t } = useTranslation();
+  
+  const skillCategories = [
+    {
+      icon: Workflow,
+      title: t("skills.waysOfWorking.title"),
+      description: t("skills.waysOfWorking.description"),
+      skills: t("skills.waysOfWorking.skills", { returnObjects: true }) as string[],
+    },
+    {
+      icon: Database,
+      title: t("skills.dataDevOps.title"),
+      description: t("skills.dataDevOps.description"),
+      skills: t("skills.dataDevOps.skills", { returnObjects: true }) as string[],
+    },
+    {
+      icon: Code2,
+      title: t("skills.frontend.title"),
+      description: t("skills.frontend.description"),
+      skills: t("skills.frontend.skills", { returnObjects: true }) as string[],
+    },
+    {
+      icon: Server,
+      title: t("skills.backend.title"),
+      description: t("skills.backend.description"),
+      skills: t("skills.backend.skills", { returnObjects: true }) as string[],
+    },
+  ];
   return (
     <section id="skills" className="section-padding">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 animate-fade-in">
-          Skills & tools
+          {t("skills.title")}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">

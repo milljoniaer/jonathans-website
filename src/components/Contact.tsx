@@ -1,68 +1,36 @@
-import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { Mail, Github, Linkedin, FileText } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-
-const socialLinks = [
-  {
-    icon: Mail,
-    label: "Email",
-    href: "mailto:jonathan@ostertage.de",
-    color: "text-accent",
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    href: "https://github.com/milljoniaer",
-    color: "text-foreground",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/jonathanostertag/",
-    color: "text-[#0A66C2]",
-  },
-  {
-    icon: FileText,
-    label: "Download CV",
-    href: "/2025-JonathanOstertag-CV-en.pdf",
-    color: "text-accent",
-  },
-];
 
 export const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const { t } = useTranslation();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Missing information",
-        description: "Please fill in all fields",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // TODO: Implement actual form submission logic
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
-  };
+  const socialLinks = [
+    {
+      icon: Mail,
+      label: t("contact.email"),
+      href: "mailto:jonathan@ostertage.de",
+      color: "text-accent",
+    },
+    {
+      icon: Github,
+      label: t("contact.github"),
+      href: "https://github.com/milljoniaer",
+      color: "text-foreground",
+    },
+    {
+      icon: Linkedin,
+      label: t("contact.linkedin"),
+      href: "https://www.linkedin.com/in/jonathanostertag/",
+      color: "text-[#0A66C2]",
+    },
+    {
+      icon: FileText,
+      label: t("contact.downloadCV"),
+      href: `/2025-JonathanOstertag-CV-en.pdf`,
+      color: "text-accent",
+    },
+  ];
 
   return (
     <section id="contact" className="section-padding bg-muted/30">
@@ -70,11 +38,10 @@ export const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold animate-fade-in">
-              Get in touch
+              {t("contact.title")}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities, interesting projects, 
-              or potential collaborations. Feel free to reach out!
+              {t("contact.subtitle")}
             </p>
           </div>
 
