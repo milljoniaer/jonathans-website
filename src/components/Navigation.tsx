@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { DarkModeToggle } from "./DarkModeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { cn } from "@/lib/utils";
+import PreviewBanner from "./PreviewBanner";
 
 export const Navigation = () => {
   const { t } = useTranslation();
@@ -34,6 +35,7 @@ export const Navigation = () => {
           : "bg-transparent"
       )}
     >
+      <PreviewBanner />
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           <a
