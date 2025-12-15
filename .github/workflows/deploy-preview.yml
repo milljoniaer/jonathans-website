@@ -30,7 +30,7 @@ jobs:
           echo "branch-slug=$SLUG" >> $GITHUB_OUTPUT
 
       - name: Use Node.js 25
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '25'
 
