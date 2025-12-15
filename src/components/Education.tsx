@@ -1,33 +1,20 @@
 import { Card } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 import { GraduationCap, Award } from "lucide-react";
 
-const education = [
-  {
-    degree: "M.Sc. Information Systems",
-    institution: "Technical University of Munich (TUM)",
-    period: "2024–2026 (ongoing)",
-    description: "Advanced studies in information systems, data analytics, and IT management",
-  },
-  {
-    degree: "B.Sc. Information Systems",
-    institution: "Technical University of Munich (TUM)",
-    period: "2020–2024",
-    description: "Average grade 2.0 - Thesis: Improving user experience of the Artemis learning platform (Grade 1.0)",
-  },
-  {
-    degree: "A-levels (Abitur)",
-    institution: "Thomas Mann Gymnasium München",
-    period: "2012-2020",
-    description: "Average grade 1.3 - Gradiuation exams in Mathematics, German, English, Informatics, Religion",
-  },
-];
-
 export const Education = () => {
+  const { t } = useTranslation();
+  const education = t("education.degrees", { returnObjects: true }) as Array<{
+    degree: string;
+    institution: string;
+    period: string;
+    description: string;
+  }>;
   return (
     <section id="education" className="section-padding">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
-          Education
+          {t("education.title")}
         </h2>
 
         <div className="max-w-4xl mx-auto space-y-6">
@@ -37,13 +24,10 @@ export const Education = () => {
               <Award className="h-8 w-8 flex-shrink-0" />
               <div>
                 <h3 className="text-2xl font-semibold mb-2">
-                  Studienstiftung des deutschen Volkes
+                  {t("education.scholarship.title")}
                 </h3>
                 <p className="text-white/90 leading-relaxed">
-                  Scholarship recipient since 2021. The Studienstiftung is Germany's 
-                  largest and most prestigious merit-based scholarship foundation, 
-                  supporting top-performing students who demonstrate academic excellence, 
-                  intellectual curiosity, and social engagement.
+                  {t("education.scholarship.description")}
                 </p>
               </div>
             </div>

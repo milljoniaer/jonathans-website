@@ -23,11 +23,11 @@ export const Writing = () => {
     <section id="writing" className="section-padding bg-muted/30">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
-          Writing & thoughts
+          {t("writing.title")}
         </h2>
 
         <div className="max-w-4xl mx-auto grid gap-6">
-          {articles.map((article, index) => (
+          {articlesWithLinks.map((article, index) => (
             <a href={article.link} target="_blank" rel="noopener noreferrer">
               <Card
                 key={index}
