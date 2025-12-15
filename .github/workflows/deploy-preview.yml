@@ -1,0 +1,100 @@
+# Preview deployment for pull requests
+name: Deploy PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+# Allow only one concurrent deployment per PR
+concurrency:
+  group: "preview-${{ github.event.pull_request.number }}"
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    if: github.event.pull_request.base.ref == 'main' && github.event.pull_request.head.ref != 'main'
+    environment:
+      name: preview
+      url: https://jonathan.ostertage.de/${{ steps.slug.outputs.branch-slug }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Slugify branch name
+        id: slug
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          # Convert to lowercase, replace non-alphanumeric with hyphens, remove leading/trailing hyphens, limit length
+          SLUG=$(echo "$BRANCH_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//' | cut -c1-50)
+          echo "branch-slug=$SLUG" >> $GITHUB_OUTPUT
+
+      - name: Use Node.js 25
+        uses: actions/setup-node@v3
+        with:
+          node-version: '25'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Add robots.txt to prevent indexing
+        run: |
+          echo "User-agent: *" > dist/robots.txt
+          echo "Disallow: /" >> dist/robots.txt
+
+      - name: Add noindex meta tag to HTML files
+        run: |
+          find dist -name "*.html" -exec sed -i 's/<head>/<head><meta name="robots" content="noindex, nofollow">/' {} \;
+
+      - name: Prepare SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_WEB_PRIV_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_WEB_PUB_KEY }}" > ~/.ssh/id_rsa.pub
+          chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
+          ssh-keyscan -H "${{ secrets.SSH_WEB_HOST }}" >> ~/.ssh/known_hosts
+          echo "Host website" > ~/.ssh/config
+          echo "  User ${{ secrets.SSH_WEB_USER }}" >> ~/.ssh/config
+          echo "  HostName ${{ secrets.SSH_WEB_HOST }}" >> ~/.ssh/config
+          echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+
+      - name: Deploy to preview folder
+        run: bin/deploy-website "${{ steps.slug.outputs.branch-slug }}"
+
+      - name: Comment PR with preview URL
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const slug = '${{ steps.slug.outputs.branch-slug }}';
+            const url = `https://jonathan.ostertage.de/${slug}`;
+            const body = `🚀 **Preview Deployment**\n\nDeine Änderungen wurden deployed: ${url}\n\n_Dieses Preview wird automatisch aktualisiert bei neuen Commits._`;
+            
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && comment.body.includes('Preview Deployment')
+            );
+            
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body
+              });
+            }

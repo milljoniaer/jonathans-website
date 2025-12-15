@@ -1,0 +1,48 @@
+# Cleanup preview deployment when PR is closed or merged
+name: Cleanup PR Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  cleanup-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slugify branch name
+        id: slug
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          SLUG=$(echo "$BRANCH_NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | sed 's/^-//' | sed 's/-$//' | cut -c1-50)
+          echo "branch-slug=$SLUG" >> $GITHUB_OUTPUT
+
+      - name: Prepare SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_WEB_PRIV_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_WEB_PUB_KEY }}" > ~/.ssh/id_rsa.pub
+          chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
+          ssh-keyscan -H "${{ secrets.SSH_WEB_HOST }}" >> ~/.ssh/known_hosts
+          echo "Host website" > ~/.ssh/config
+          echo "  User ${{ secrets.SSH_WEB_USER }}" >> ~/.ssh/config
+          echo "  HostName ${{ secrets.SSH_WEB_HOST }}" >> ~/.ssh/config
+          echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+
+      - name: Delete preview folder
+        run: |
+          ssh website "rm -rf jonathan/${{ steps.slug.outputs.branch-slug }}"
+
+      - name: Comment PR about cleanup
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const slug = '${{ steps.slug.outputs.branch-slug }}';
+            const body = `🧹 **Preview Cleanup**\n\nDas Preview-Deployment \`${slug}\` wurde gelöscht.`;
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body
+            });

@@ -1,6 +1,16 @@
 #!/bin/sh
 
+SUBFOLDER="${1:-}"
+
 cd dist || exit 3
 find . -type d -exec chmod 755 {} \;
 find . -type f -exec chmod 644 {} \;
-rsync -q --progress  -avz --delete . website:jonathan/.
+
+if [ -n "$SUBFOLDER" ]; then
+  # Preview deployment - sync to subfolder
+  ssh website "mkdir -p jonathan/$SUBFOLDER"
+  rsync -q --progress -avz --delete . website:jonathan/$SUBFOLDER/.
+else
+  # Production deployment - sync to root
+  rsync -q --progress -avz --delete . website:jonathan/.
+fi
