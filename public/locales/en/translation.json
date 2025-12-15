@@ -173,17 +173,7 @@
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "downloadCV": "Download CV",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Send Message",
-      "missingInfo": "Missing information",
-      "fillAllFields": "Please fill in all fields",
-      "messageSent": "Message sent!",
-      "thanks": "Thanks for reaching out. I'll get back to you soon."
-    }
+    "downloadCV": "Download CV"
   },
   "projects": {
     "title": "Selected projects",

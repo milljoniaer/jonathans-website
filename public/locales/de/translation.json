@@ -22,7 +22,7 @@
   "about": {
     "title": "Über mich",
     "imageAlt": "Kollaborativer Arbeitsbereich mit Teammitgliedern, die zusammen an Laptops arbeiten",
-    "paragraph1": "Hallo! Ich bin Jonathan. Ich bin in München geboren und aufgewachsen. Ich hatte das (meistens) Privileg, mit einer älteren Schwester und zwei jüngeren Brüdern aufzuwachsen. Neben technischen Interessen bin ich leidenschaftlich daran interessiert, Musik zu spielen (Schlagzeug, Keyboard, Gitarre & Bass), Sport zu treiben und Zeit im Freien zu verbringen. Ich sehe mich selbst als humorvolle Person, obwohl meine Freunde dem manchmal widersprechen würden 😅.",
+    "paragraph1": "Hallo! Ich bin Jonathan. Ich bin in München geboren und aufgewachsen. Ich hatte das (überwiegende) Privileg, mit einer älteren Schwester und zwei jüngeren Brüdern aufzuwachsen. Neben technischen Interessen bin ich leidenschaftlich daran interessiert, Musik zu spielen (Schlagzeug, Keyboard, Gitarre & Bass), Sport zu treiben und Zeit im Freien zu verbringen. Ich sehe mich selbst als humorvolle Person, obwohl meine Freunde dem manchmal widersprechen würden 😅.",
     "paragraph2": "Ich absolviere derzeit meinen Master in Wirtschaftsinformatik an der Technischen Universität München (TUM), aufbauend auf meinem Bachelor-Abschluss von derselben Institution. Von klein auf war ich fasziniert von Technologie und wie sie echte Probleme lösen kann – nicht nur technische, sondern Herausforderungen, die den Alltag der Menschen beeinflussen. Meine Arbeit liegt an der Schnittstelle starker technischer Fähigkeiten und einem tiefen Interesse an User Experience, IT-Governance und Zusammenarbeit. Ich beschreibe mich selbst als \"menschenorientierten Nerd\", weil ich glaube, dass die beste Software mit und für Menschen gebaut wird, nicht nur für Maschinen.",
     "paragraph3": "Momentan begeistere ich mich besonders für KI-gestützte Entwicklertools, datengetriebene Entscheidungsfindung und IT-Architektur. Ich liebe es zu erforschen, wie neue Technologien die Industrie effizienter machen können, während Qualität und benutzerzentriertes Design erhalten bleiben.",
     "quickFacts": "Fakten auf einen Blick",
@@ -87,7 +87,7 @@
     "title": "Erfahrung",
     "experiences": [
       {
-        "role": "Frontend Team Lead (Werkstudent)",
+        "role": "Frontend Team Lead (Student)",
         "company": "TUM @ CSEE GmbH / EUTOP",
         "period": "2025",
         "description": [
@@ -173,17 +173,7 @@
     "email": "E-Mail",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "downloadCV": "Lebenslauf herunterladen",
-    "form": {
-      "name": "Name",
-      "email": "E-Mail",
-      "message": "Nachricht",
-      "submit": "Nachricht senden",
-      "missingInfo": "Fehlende Informationen",
-      "fillAllFields": "Bitte füllen Sie alle Felder aus",
-      "messageSent": "Nachricht gesendet!",
-      "thanks": "Vielen Dank für Ihre Nachricht. Ich melde mich bald bei Ihnen."
-    }
+    "downloadCV": "Lebenslauf herunterladen"
   },
   "projects": {
     "title": "Ausgewählte Projekte",

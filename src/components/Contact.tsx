@@ -1,16 +1,10 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { Mail, Github, Linkedin, FileText } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
-  const { t, i18n } = useTranslation();
-  const { toast } = useToast();
-  
+  const { t } = useTranslation();
+
   const socialLinks = [
     {
       icon: Mail,
@@ -37,34 +31,6 @@ export const Contact = () => {
       color: "text-accent",
     },
   ];
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: t("contact.form.missingInfo"),
-        description: t("contact.form.fillAllFields"),
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // TODO: Implement actual form submission logic
-    toast({
-      title: t("contact.form.messageSent"),
-      description: t("contact.form.thanks"),
-    });
-
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
-  };
 
   return (
     <section id="contact" className="section-padding bg-muted/30">
