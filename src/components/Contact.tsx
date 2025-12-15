@@ -33,7 +33,7 @@ export const Contact = () => {
     {
       icon: FileText,
       label: t("contact.downloadCV"),
-      href: `/2025-JonathanOstertag-CV-${i18n.language}.pdf`,
+      href: `/2025-JonathanOstertag-CV-en.pdf`,
       color: "text-accent",
     },
   ];
