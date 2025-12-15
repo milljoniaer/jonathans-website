@@ -8,7 +8,7 @@ import { Mail, Github, Linkedin, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { toast } = useToast();
   
   const socialLinks = [
@@ -33,7 +33,7 @@ export const Contact = () => {
     {
       icon: FileText,
       label: t("contact.downloadCV"),
-      href: "/2025-JonathanOstertag-CV-en.pdf",
+      href: `/2025-JonathanOstertag-CV-${i18n.language}.pdf`,
       color: "text-accent",
     },
   ];
