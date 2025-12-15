@@ -8,13 +8,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Languages } from "lucide-react";
 
-const languages = [
-  { code: "en", name: "English" },
-  { code: "de", name: "Deutsch" },
-];
-
 export const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const languages = [
+    { code: "en", name: t("languageSwitcher.english") },
+    { code: "de", name: t("languageSwitcher.german") },
+  ];
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -27,7 +27,7 @@ export const LanguageSwitcher = () => {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" className="relative">
           <Languages className="h-5 w-5" />
-          <span className="sr-only">Switch language</span>
+          <span className="sr-only">{t("languageSwitcher.switchLanguage")}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

@@ -1,4 +1,9 @@
 {
+  "languageSwitcher": {
+    "switchLanguage": "Sprache wechseln",
+    "english": "English",
+    "german": "Deutsch"
+  },
   "nav": {
     "logo": "JO",
     "about": "Über mich",
