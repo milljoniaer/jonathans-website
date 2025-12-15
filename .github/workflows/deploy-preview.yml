@@ -42,7 +42,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: npm run build -- --base=/${{ steps.slug.outputs.branch-slug }}/
 
       - name: Add robots.txt to prevent indexing
         run: |
