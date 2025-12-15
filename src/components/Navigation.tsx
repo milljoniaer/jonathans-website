@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { DarkModeToggle } from "./DarkModeToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
-const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
-  { label: "Projects", href: "#projects" },
-];
-
 export const Navigation = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const navItems = [
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.skills"), href: "#skills" },
+    { label: t("nav.experience"), href: "#experience" },
+    { label: t("nav.contact"), href: "#contact" },
+    { label: t("nav.projects"), href: "#projects" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +40,7 @@ export const Navigation = () => {
             href="#hero"
             className="text-xl font-bold text-foreground hover:text-primary transition-colors"
           >
-            JO
+            {t("nav.logo")}
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -52,7 +55,10 @@ export const Navigation = () => {
             ))}
           </div>
 
-          <DarkModeToggle />
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher />
+            <DarkModeToggle />
+          </div>
         </div>
       </div>
     </nav>

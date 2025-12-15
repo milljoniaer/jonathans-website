@@ -1,0 +1,258 @@
+{
+  "nav": {
+    "logo": "JO",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "projects": "Projects"
+  },
+  "hero": {
+    "name": "Jonathan Ostertag",
+    "title": "Information Systems M.Sc. Student",
+    "description": "I'm a people-oriented nerd who loves building elegant, pragmatic software solutions. Currently studying Information Systems at TUM in Munich, I work at the intersection of modern web engineering, data analytics, and IT governance—always with a focus on collaboration and real-world impact.",
+    "viewExperience": "View Experience",
+    "getInTouch": "Get in Touch"
+  },
+  "about": {
+    "title": "About me",
+    "imageAlt": "Collaborative workspace with team members working together on laptops",
+    "paragraph1": "Hi! I'm Jonathan. I was born and raised in Munich. I had the (most of the time) privilege of growing up with an older sister and two younger brothers. Besides technical interests, I am passionate about playing music (drums, keyboard, guitar & bass), sports, and spending time outdoors. I perceive myself as a humorful person, although my friends would probably disagree sometimes 😅.",
+    "paragraph2": "I'm currently pursuing my Master's in Information Systems at the Technical University of Munich (TUM), building on my bachelor's degree from the same institution. From an early age, I've been fascinated by technology and how it can solve real problems—not just technical ones, but challenges that impact people's daily lives. My work sits at the intersection of strong technical skills and a deep interest in user experience, IT governance, and collaboration. I describe myself as a \"people-oriented nerd\" because I believe the best software is built with and for humans, not just machines.",
+    "paragraph3": "Right now, I'm particularly excited about AI-assisted developer tools, data-driven decision-making, and IT architecture. I love exploring how emerging technologies can make industry more efficient while maintaining quality and user-centered design.",
+    "quickFacts": "Quick facts",
+    "location": "Location",
+    "locationValue": "Munich, Germany \n (heart in munich, open for worldwide travel)",
+    "currentFocus": "Current Focus",
+    "currentFocusValue": "Business Information Systems & Integrated Web Applications",
+    "workingStyle": "Working Style",
+    "workingStyleValue": "Structured, communicative, pragmatic",
+    "languages": "Languages",
+    "languagesValue": "German (native), English (C1)"
+  },
+  "skills": {
+    "title": "Skills & tools",
+    "waysOfWorking": {
+      "title": "Ways of Working",
+      "description": "Applying structured methodologies to deliver value efficiently",
+      "skills": [
+        "IT Architecture",
+        "IT Governance",
+        "Requirements Engineering",
+        "Scrum",
+        "Kanban"
+      ]
+    },
+    "dataDevOps": {
+      "title": "Data & DevOps",
+      "description": "Managing data and streamlining deployment workflows",
+      "skills": [
+        "MySQL",
+        "PostgreSQL",
+        "Docker",
+        "GitHub Actions",
+        "NumPy",
+        "TensorFlow"
+      ]
+    },
+    "frontend": {
+      "title": "Frontend",
+      "description": "Building modern, responsive user interfaces with attention to detail",
+      "skills": [
+        "React",
+        "Angular",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "UI/UX principles"
+      ]
+    },
+    "backend": {
+      "title": "Backend & APIs",
+      "description": "Creating robust server-side solutions and RESTful services",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "FastAPI",
+        "REST APIs"
+      ]
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "experiences": [
+      {
+        "role": "Frontend Team Lead (Student)",
+        "company": "TUM @ CSEE GmbH / EUTOP",
+        "period": "2025",
+        "description": [
+          "Leading small frontend team for AI-based internal business information system",
+          "Managing customer interactions and technical architecture decisions",
+          "Coordinating development workflows and code quality standards"
+        ],
+        "technologies": [
+          "React",
+          "TypeScript",
+          "AI Integration",
+          "Team Leadership"
+        ]
+      },
+      {
+        "role": "Working Student",
+        "company": "PricewaterhouseCoopers (Technical Process Risk)",
+        "period": "2024–2025",
+        "description": [
+          "Supporting IT audit teams with governance and risk assessment",
+          "Creating presentations and analysis documentation in PowerPoint and Excel",
+          "Communicating directly with clients on technical audit matters",
+          "Contributing to IT process and control evaluations"
+        ],
+        "technologies": [
+          "IT Governance",
+          "Audit Support",
+          "Client Communication",
+          "Excel/PowerPoint"
+        ]
+      },
+      {
+        "role": "Junior Frontend Engineer",
+        "company": "Satellytes (Projects @ Allianz, MediaMarktSaturn, ADAC Motorsport)",
+        "period": "2021–2024",
+        "description": [
+          "Built internal tools for actuaries with complex data visualization",
+          "Developed company & campaign websites with content management system integrations",
+          "Maintained large-scale production websites with high traffic",
+          "Improved CI/CD pipelines and worked in cross-functional agile teams"
+        ],
+        "technologies": [
+          "React",
+          "Angular",
+          "TypeScript",
+          "CI/CD",
+          "Agile",
+          "CMS"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "scholarship": {
+      "title": "Studienstiftung des deutschen Volkes",
+      "description": "Scholarship recipient since 2021. The Studienstiftung is Germany's largest and most prestigious merit-based scholarship foundation, supporting top-performing students who demonstrate academic excellence, intellectual curiosity, and social engagement."
+    },
+    "degrees": [
+      {
+        "degree": "M.Sc. Information Systems",
+        "institution": "Technical University of Munich (TUM)",
+        "period": "2024–2026 (ongoing)",
+        "description": "Advanced studies in information systems, data analytics, and IT management"
+      },
+      {
+        "degree": "B.Sc. Information Systems",
+        "institution": "Technical University of Munich (TUM)",
+        "period": "2020–2024",
+        "description": "Average grade 2.0 - Thesis: Improving user experience of the Artemis learning platform (Grade 1.0)"
+      },
+      {
+        "degree": "A-levels (Abitur)",
+        "institution": "Thomas Mann Gymnasium München",
+        "period": "2012-2020",
+        "description": "Average grade 1.3 - Gradiuation exams in Mathematics, German, English, Informatics, Religion"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "I'm always open to discussing new opportunities, interesting projects, or potential collaborations. Feel free to reach out!",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "downloadCV": "Download CV",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "missingInfo": "Missing information",
+      "fillAllFields": "Please fill in all fields",
+      "messageSent": "Message sent!",
+      "thanks": "Thanks for reaching out. I'll get back to you soon."
+    }
+  },
+  "projects": {
+    "title": "Selected projects",
+    "subtitle": "A selection of personal recent projects (besides professional projects).",
+    "code": "Code",
+    "demo": "Demo",
+    "items": [
+      {
+        "title": "Artemis UX Improvements",
+        "description": [
+          "Bachelor's thesis focused on enhancing user experience of TUM's learning platform",
+          "Conducted user research and usability testing with students and instructors",
+          "Implemented interface improvements that increased task completion rates"
+        ],
+        "technologies": [
+          "UX Research",
+          "Usability Testing",
+          "Angular",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": "RateIt – AI-powered outfit rating",
+        "description": [
+          "Social platform for fashion enthusiasts to rate and discover outfit combinations",
+          "Integrated AI-based image analysis for style recommendations",
+          "Built web application with microservices architecture, browser add-on and mobile app"
+        ],
+        "technologies": [
+          "React",
+          "Next.js",
+          "AI/ML",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "title": "This Website",
+        "description": [
+          "Experimental AI-generated project based on CV input (see lovable's website)",
+          "I can only recommend trying it out yourself to see the results! 😄",
+          "Explores the capabilities of AI in web development and replacing web devs..."
+        ],
+        "technologies": [
+          "Lovable",
+          "React",
+          "Vite",
+          "Tailwind & Shadcn"
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "title": "Writing & thoughts",
+    "articles": [
+      {
+        "title": "Bachelors Thesis: Improving the General Artemis User Experience",
+        "summary": "Scientific analysis, design & implementation of UX best practices to enhance the usability of TUM's learning platform Artemis, based on user research and Norman & Nielsen's studies.",
+        "date": "15. March 2024"
+      },
+      {
+        "title": "Building a gatsbyjs CD pipeline with Github Actions & Digital Ocean",
+        "summary": "Following Netlify's acquisition of Gatsby Cloud in February 2023, resulting in the discontinuation of Gatsby Cloud's services, we were forced to find an alternative solution to host one of our customer's website. Read the following text to dive deeper into our journey toward our CD pipeline utilizing GitHub Actions, Digital Ocean Spaces, and self-hosted GitHub Runners.",
+        "date": "28. November 2023"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {{year}} Jonathan Ostertag. All rights reserved.",
+    "builtWith": "Built with",
+    "and": ", React, TypeScript & Tailwind CSS"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "returnHome": "Return to Home"
+  }
+}
