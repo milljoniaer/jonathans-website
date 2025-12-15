@@ -27,7 +27,7 @@ export const Contact = () => {
     {
       icon: FileText,
       label: t("contact.downloadCV"),
-      href: `/2025-JonathanOstertag-CV-en.pdf`,
+      href: `${import.meta.env.BASE_URL}2025-JonathanOstertag-CV-en.pdf`,
       color: "text-accent",
     },
   ];
