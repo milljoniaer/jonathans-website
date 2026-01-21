@@ -222,6 +222,20 @@
           "Vite",
           "Tailwind & Shadcn"
         ]
+      },
+      {
+        "title": "Jonathan's Job Aggregator",
+        "description": [
+          "In the final steps of my master’s degree, I monitor the job portals of companies I am interested in",
+          "To make this easier, I automatically crawl and filter job postings every morning",
+          "A small productivity tool tailored exactly to my needs"
+        ],
+        "technologies": [
+          "GitHub Actions",
+          "Vanilla JavaScript",
+          "Plain Tailwind CSS & HTML",
+          "(Express.js)"
+        ]
       }
     ]
   },

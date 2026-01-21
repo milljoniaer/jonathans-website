@@ -3,9 +3,20 @@ import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import projectImg0 from "@/assets/job-aggregator.png";
 import projectImg1 from "@/assets/personal-website.png";
 import projectImg2 from "@/assets/rate-it.svg";
 import projectImg3 from "@/assets/artemis.png";
+
+interface Project {
+  title: string; // see translation files
+  description: string[]; // see translation files
+  technologies: string[]; // see translation files
+
+  image: string;
+  github: string;
+  demo?: string;
+}
 
 export const Projects = () => {
   const { t } = useTranslation();
@@ -15,7 +26,7 @@ export const Projects = () => {
     technologies: string[];
   }>;
   
-  const projects = [
+  const projects: Project[] = [
     {
       ...projectItems[0],
       image: projectImg3,
@@ -33,6 +44,12 @@ export const Projects = () => {
       github: "https://github.com/milljoniaer/jonathans-website",
       demo: "https://jonathan.ostertage.de"
     },
+    {
+      ...projectItems[3], // TODO
+      image: projectImg0,
+      github: "https://github.com/milljoniaer/job-search-aggregator",
+      demo: "https://milljoniaer.github.io/job-search-aggregator/"
+    }
   ];
   return (
     <section id="projects" className="section-padding">
