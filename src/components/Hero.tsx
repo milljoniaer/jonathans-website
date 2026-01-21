@@ -6,7 +6,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 export const Hero = () => {
   const { t } = useTranslation();
-  
+
   return (
     <section
       id="hero"
@@ -17,7 +17,7 @@ export const Hero = () => {
         <img
           src={heroBackground}
           alt=""
-          className="w-full h-full object-cover opacity-20 dark:opacity-10"
+          className="w-full h-full object-cover opacity-20 dark:opacity-10 dark:[filter:none] [filter:invert(1)_hue-rotate(180deg)]"
         />
       </div>
       <div className="container-custom relative z-10">
