@@ -87,19 +87,19 @@
     "title": "Erfahrung",
     "experiences": [
       {
-        "role": "Frontend Team Lead (Student)",
-        "company": "TUM @ CSEE GmbH / EUTOP",
-        "period": "2025",
+        "role": "Fullstack Engineer | R&D Database",
+        "company": "Infineon Technologies",
+        "period": "2026-heute",
         "description": [
-          "Leitung eines kleinen Frontend-Teams für ein KI-basiertes internes Geschäftsinformationssystem",
-          "Verwaltung von Kundeninteraktionen und Entscheidungen zur technischen Architektur",
-          "Koordination von Entwicklungsworkflows und Codequalitätsstandards"
+          "Weiterentwicklung und Betrieb eines Informationssystems zur Pflege von R&D Daten",
+          "Umfassende technische Betreuung (Development, DevOps Introduction, UX Improvements)",
+          "Requirements Engineering und internes Stakeholder Management"
         ],
         "technologies": [
-          "React",
-          "TypeScript",
-          "KI-Integration",
-          "Teamführung"
+          "Django",
+          "Python",
+          "MySQL DB",
+          "Gitlab CI"
         ]
       },
       {
