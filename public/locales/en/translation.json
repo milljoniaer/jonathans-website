@@ -12,6 +12,10 @@
     "contact": "Contact",
     "projects": "Projects"
   },
+  "previewBanner": {
+    "buildLabel": "Preview Build:",
+    "disclaimer": "This is not the production site"
+  },
   "hero": {
     "name": "Jonathan Ostertag",
     "title": "Information Systems M.Sc. Student",

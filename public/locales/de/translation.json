@@ -12,6 +12,10 @@
     "contact": "Kontakt",
     "projects": "Projekte"
   },
+  "previewBanner": {
+    "buildLabel": "Preview-Build:",
+    "disclaimer": "Dies ist nicht die Produktionsseite"
+  },
   "hero": {
     "name": "Jonathan Ostertag",
     "title": "M.Sc. Wirtschaftsinformatik Student",
